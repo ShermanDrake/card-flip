@@ -7,31 +7,28 @@
 		-webkit-transform-style
 		-webkit-backface-visibility
 */
-.portfolio-item:hover {
-	-webkit-transform-style: preserve-3d;
-	-webkit: transition: all 1.0 linear;
-
-}
-
 
 .front {
 	position: relative;
 	z-index: 2;
-
+	transition:transform 0.5s;
+	backface-visibility: hidden;
 }
-.back{
+.back {
 	position: relative;
-bottom: 200px;
+	bottom: 200px;
+	transform: rotateY(180deg);
+	transition:transform 0.5s;
 }
 
-.front:hover {
-opacity: 0
+.portfolio-item:hover .front{
+transform: rotateY(180deg);
 }
 
-.box:hover{
-opacity: 1
-
+.portfolio-item:hover .back{
+transform: rotateY(0deg);
 }
+
 
 
 
